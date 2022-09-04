@@ -1,8 +1,38 @@
 {
   "devDependencies": {
-    "jest": "^29.0.1"
+    "jest": "^29.0.1",
+    "nodemon": "^2.0.19"
   },
   "dependencies": {
-    "inquirer": "^9.1.1"
-  }
+    "inquirer": "^8.2.4"
+  },
+  "name": "team-maker",
+  "version": "1.0.0",
+  "description": "A node.js commandline application that can generate an HTML page that desplayies a summary of a users's input. ",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhilemonKirlles/team-maker.git"
+  },
+  "keywords": [
+    "node.js",
+    "HTML",
+    "generator",
+    "TDD",
+    "OOP",
+    "javaScript"
+  ],
+  "author": "Philemon AbdEllah Kirlles",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/PhilemonKirlles/team-maker/issues"
+  },
+  "homepage": "https://github.com/PhilemonKirlles/team-maker#readme"
 }
