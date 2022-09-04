@@ -1,45 +1,48 @@
-// Required packages
-const inquirer = require("inquirer");
-const fs = require("fs");
+// require 
+// import
 const path = require("path");
-const fileDirectory = path.resolve(__dirname, "dist");
-const filePath = path.join(fileDirectory, "index.html");
-
-// Required module exports
+const fs = require("fs");
+const inquirer = require("inquirer");
+//export
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
-const renderHTML = rtemplateequire("./lib/generateHTML");
+
+const fileDirectory = path.resolve(__dirname, "dist");
+const filePath = path.join(fileDirectory, "index.html");
+
+const renderHTML = require("./lib/generateHTML");
 
 // Employee array
 let employeesArr = [];
 
-// Questions array for all employees
+
+// Questions: all employees
 const questions = [           
     {
         type: "input",
         name: "name",
-        message: "What is the name of this employee?"
+        message: "What is the employee's name?"
     },
     {
         type: "input",
         name: "id",
-        message: "What is the ID of this employee?"
+        message: "What is the employee's ID?"
     },
     {
         type: "input",
         name: "email",
-        message: "What is this employee's email?"
+        message: "What is the employee's email?"
     },
     {
         type: "list",
         name: "role",
-        message: "What role does this employee have?",
+        message: "What is the employee's role?",
         choices: ["Engineer", "Intern", "Manager"]
     }
     ]
 
-    // Questions for manager role
+    // Questions: manager role prompt
     managerQuestions = [
         {
             type: "input",
@@ -79,7 +82,7 @@ const questions = [
         {
             type: "input",
             name: "school",
-            message: "What school is the intern from? (Required)",
+            message: "What is the intern's school?",
             validate: school => {
                 if (school) {
                   return true;
@@ -96,7 +99,7 @@ const questions = [
         if (fs.existsSync(filePath)) {
             inquirer.prompt({
                 type: "confirm",
-                message: "It looks like the index.html file in the 'dist' folder already exists. Do you want to overwrite it?",
+                message: " 'dist'  already exists. Do you want to overwrite it?",
                 name: "overwrite"
             }).then(async (response) => {
     
@@ -109,7 +112,7 @@ const questions = [
                 }
             })
         } else {
-            console.log("Welcome to the team profile generator. Please enter your team information below:")
+            console.log("Please enter your team's information below:")
             newEmployee()
         }
     };   
@@ -161,7 +164,7 @@ const questions = [
         .prompt({
             type: "confirm",
             name: "addEmployee",
-            message: "Would you like to add an employee? (Required)"
+            message: "Would you like to add an employee?"
 
         }).then(async (response) => {
             var createEmployee = response.addEmployee;
@@ -183,7 +186,7 @@ const questions = [
                 }
                 
                 // Success message
-                console.log("Your index.html file has been created in the 'dist' folder!");
+                console.log("index.html has been created in the 'dist' folder!");
             });
 
         }

@@ -1,13 +1,26 @@
 const Intern = require("../lib/Intern");
 
-test("Ability to set school using constructor function", () => {
-    const school = "UConn School of Dreams ";
-    const employee = new Intern("Philemon", 1, "Philemon.kirlleuos@gmail.com", school);
-    expect(employee.school).toBe(school);
-  });
+test("create intern object", () => {
+  const name = "Alexandra";
+  const id = "3000";
+  const email = "Alexandra@gmail.com";
+  const school = "Github School of Zeros and Ones";
+  const intern = new Intern(name, id, email, school);
 
-  test("getRole() should return Intern as a role", () => {
-    const role = "Intern";
-    const employee = new Intern("Philemon", 1, "Philemon.kirlleuos@gmail.com", "Philemonkirlleuos");
-    expect(employee.getRole()).toBe(role);
-  });
+  expect(intern.name).toBe(name);
+  expect(intern.id).toBe(id);
+  expect(intern.school).toBe(school);
+  expect(intern.email).toBe(email);
+});
+
+test("retrieve intern school", () => {
+  const name = "Alexandra";
+  const id = "3000";
+  const school = "Github School of Zeros and Ones";
+
+  const intern = new Intern(name, id, email, school);
+  const email = "Alexandra@gmail.com";
+  expect(intern.getSchool()).toStrictEqual(
+    expect.stringContaining(intern.school.toString())
+  );
+});
