@@ -2,7 +2,7 @@
 
 [[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-![Project Vedio](https://github.com/PhilemonKirlles/team-maker/blob/main/assets/media/teamMaker.mp4)
+![Project Vedio](./assets/media/teamMaker.mp4)
 
 ![medialink](https://drive.google.com/file/d/1A33Xp4B6L1n47MfSXLBJVSOUf7UX-TUG/preview)
 ---
