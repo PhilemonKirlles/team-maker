@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.card-header{
+    background-color:rgb(97, 130, 192);
+    color: white;
+    padding: 25px;
+    margin: 5px;
+}
+
+.card-body{
+    background-color: rgb(159, 207, 207);
+    padding: 25px;
+    margin: 5px;
+  border-top-left-radius:6%;
+}
+
+
+li:hover {
+    background-color: lightgrey;
+}
+
+a {
+    color: rgb(99, 33, 33);
+}
+a:hover {
+    background-color: rgb(159, 207, 207);
+    border-radius: 10%;
+}

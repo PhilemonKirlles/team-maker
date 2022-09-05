@@ -5,6 +5,7 @@
     "npm-prepare-dist": "^0.4.1"
   },
   "dependencies": {
+    "bootstrap": "^5.2.0",
     "inquirer": "^8.2.4"
   },
   "name": "team-maker",
