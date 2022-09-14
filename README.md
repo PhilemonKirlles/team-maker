@@ -48,8 +48,8 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## Deployment Site
 
-[https://philemon-noted.herokuapp.com/
-](https://philemon-noted.herokuapp.com/)
+[https://philemonkirlles.github.io/team-maker/
+](https://philemonkirlles.github.io/team-maker/)
 
 ### License
 
